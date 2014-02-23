@@ -223,3 +223,16 @@ int min_int(int a, int b) {
   if (a > b) return a;
   return b;
 }
+
+bool is_pandigital(uint64_t n) {
+  // does not include 0
+  int digits = 0; int count = 0; int tmp;
+
+  for (; n > 0; n /= 10, ++count)
+  {
+      if ((tmp = digits) == (digits |= 1 << (n - ((n / 10) * 10) - 1)))
+          return false;
+  }
+  
+  return digits == (1 << count) - 1;
+}

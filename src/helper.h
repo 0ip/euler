@@ -38,3 +38,5 @@ int min_int(int a, int b);
 
 uint64_t reverse_digits(uint64_t n);
 bool is_palindrome(uint64_t n, int base);
+
+bool is_pandigital(uint64_t n);
